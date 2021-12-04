@@ -1,5 +1,9 @@
 # Changelog
 
+**v1.9.2**
+
+* Fixed a bug with unsupported keybindings by [LynxStar](https://github.com/MarcStan/monogame-framework-wpfinterop/pull/29)
+
 **v1.9.1**
 
 * Fixed bug that causes flickering due to sync issue ([issue #27](https://github.com/MarcStan/monogame-framework-wpfinterop/issues/27)) by [georg-eckert-zeiss](https://github.com/MarcStan/monogame-framework-wpfinterop/pull/28)
