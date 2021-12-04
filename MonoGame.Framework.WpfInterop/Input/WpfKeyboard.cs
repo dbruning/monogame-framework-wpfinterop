@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Linq;
 
 namespace MonoGame.Framework.WpfInterop.Input
 {
@@ -17,6 +18,9 @@ namespace MonoGame.Framework.WpfInterop.Input
         #region Fields
 
         private readonly WpfGame _focusElement;
+
+        //ToHasSet<T> is not available in .NET 4.5.2
+        private static HashSet<int> XNAKeys = new HashSet<int>(Enum.GetValues(typeof(Keys)).Cast<int>());
 
         #endregion
 
@@ -87,7 +91,7 @@ namespace MonoGame.Framework.WpfInterop.Input
 
                         //This is just for a short demo, you may want this to return
                         //multiple keys!
-                        if (key != 0)
+                        if (key != 0 && XNAKeys.Contains(i))
                             pressedKeys.Add((Keys)i);
                     }
                 }
