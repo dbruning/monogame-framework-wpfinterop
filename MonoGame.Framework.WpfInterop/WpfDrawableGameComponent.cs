@@ -11,7 +11,6 @@ namespace MonoGame.Framework.WpfInterop
     {
         #region Fields
 
-        private readonly WpfGame _game;
         private bool _visible = true;
         private int _drawOrder;
         private bool _initialized;
@@ -22,7 +21,6 @@ namespace MonoGame.Framework.WpfInterop
 
         public WpfDrawableGameComponent(WpfGame game) : base(game)
         {
-            _game = game;
         }
 
         #endregion
@@ -37,7 +35,7 @@ namespace MonoGame.Framework.WpfInterop
 
         #region Properties
 
-        public GraphicsDevice GraphicsDevice => _game.GraphicsDevice;
+        public GraphicsDevice GraphicsDevice => Game?.GraphicsDevice;
 
         public int DrawOrder
         {

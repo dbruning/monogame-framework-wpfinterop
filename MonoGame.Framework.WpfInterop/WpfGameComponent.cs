@@ -17,6 +17,11 @@ namespace MonoGame.Framework.WpfInterop
 
         #region Constructors
 
+        public WpfGameComponent()
+        {
+
+        }
+
         public WpfGameComponent(WpfGame game)
         {
             Game = game;
@@ -34,7 +39,7 @@ namespace MonoGame.Framework.WpfInterop
 
         #region Properties
 
-        public WpfGame Game { get; }
+        public WpfGame Game { get; set; }
 
         public bool Enabled
         {
